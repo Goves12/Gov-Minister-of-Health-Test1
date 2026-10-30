@@ -1519,7 +1519,6 @@
     superadmin: "Суперпользователь",
     admin: "Старший состав",
     user: "Инструктор"
-    doctor: "Главный врач"
   };
 
   const DAY_NAMES = ["Воскресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота"];
@@ -2049,7 +2048,7 @@
     return false;
   }
   function isAdmin() {
-    return state.user && (state.user.role === "admin" || state.user.role === "superadmin" || state.user.role === "doctor");
+    return state.user && (state.user.role === "admin" || state.user.role === "superadmin");
   }
   function isSuperadmin() {
     return state.user && state.user.role === "superadmin";
