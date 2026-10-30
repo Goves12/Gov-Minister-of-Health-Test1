@@ -1001,7 +1001,7 @@ select option { background: #0c1420; color: var(--text); }
   }
 
   function isAdmin() {
-    return state.user && (state.user.role === "admin" || state.user.role === "superadmin");
+    return state.user && (state.user.role === "admin" || state.user.role === "superadmin" || state.user.role === "doctor");
   }
 
   /* ===== Утилиты выслуги ===== */

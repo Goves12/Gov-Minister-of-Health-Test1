@@ -1154,7 +1154,7 @@
     return null;
   }
 
-  function isAdmin() { return state.user && (state.user.role === "admin" || state.user.role === "superadmin"); }
+  function isAdmin() { return state.user && (state.user.role === "admin" || state.user.role === "superadmin" || state.user.role === "doctor"); }
   function isSuperadmin() { return state.user && state.user.role === "superadmin"; }
 
   function esc(s) {
