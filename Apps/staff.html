@@ -1234,20 +1234,19 @@
     28: "Губернатор"
   };
 
-    function rankOptionsHtml(currentRank) {
+      function rankOptionsHtml(currentRank) {
     const parsed = parseRankForSelect(currentRank);
     let html = "";
     
-    // Генерируем ранги с 1 по 27
+    // Создаем ранги с 1 по 27
     for (let i = 1; i <= 27; i++) {
-      // Если в RANK_TO_POSITION есть название для этого ранга, выводим его
       if (RANK_TO_POSITION[i]) {
         html += '<option value="' + i + '"' + (parsed === i ? ' selected' : '') + '>' +
                 i + ' - ' + RANK_TO_POSITION[i] + '</option>';
       }
     }
     
-    // Отдельно добавляем 28-й ранг
+    // Добавляем 28-й ранг
     html += '<option value="28"' + (parsed === 28 ? ' selected' : '') + '>28 - Губернатор</option>';
     
     return html;
