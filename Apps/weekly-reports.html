@@ -1437,15 +1437,7 @@ select option { background: var(--input-bg); color: var(--text); }
   }
 
   function isAcceptOpen(weekId) {
-    const [y, m, d] = weekId.split("-").map(Number);
-    const sunday = new Date(y, m - 1, d);
-    sunday.setHours(0, 0, 0, 0);
-    const thursday = new Date(sunday); thursday.setDate(thursday.getDate() + 4);
-    thursday.setHours(0, 0, 0, 0);
-    const nextSunday = new Date(sunday); nextSunday.setDate(nextSunday.getDate() + 7);
-    nextSunday.setHours(0, 0, 0, 0);
-    const now = new Date();
-    return now >= thursday && now < nextSunday;
+    return true; // Приём открыт всегда
   }
 
   function apiPost(payload) {
