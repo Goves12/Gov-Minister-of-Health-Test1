@@ -1601,10 +1601,8 @@ select option { background: var(--input-bg); color: var(--text); }
   }
 
   function getSmpStaff() {
-    return state.staff.filter(s => {
-      if (s.department !== "СМП") return false;
-      return parseRank(s.rank) >= 5;
-    }).sort(compareStaff);
+    // Показываем ВСЕХ сотрудников без фильтра по отделу и рангу
+    return state.staff.sort(compareStaff);
   }
 
   function getInstrStaff() {
