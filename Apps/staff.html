@@ -1235,22 +1235,22 @@
   };
 
       function rankOptionsHtml(currentRank) {
-    const parsed = parseRankForSelect(currentRank);
-    let html = "";
-    
-    // Создаем ранги с 1 по 27
-    for (let i = 1; i <= 27; i++) {
-      if (RANK_TO_POSITION[i]) {
-        html += '<option value="' + i + '"' + (parsed === i ? ' selected' : '') + '>' +
-                i + ' - ' + RANK_TO_POSITION[i] + '</option>';
-      }
+  const parsed = parseRankForSelect(currentRank);
+  let html = "";
+  
+  // Создаем ранги с 1 по 27
+  for (let i = 1; i <= 27; i++) {
+    if (RANK_TO_POSITION[i]) {
+      html += '<option value="' + i + '"' + (parsed === i ? ' selected' : '') + '>' +
+              i + ' - ' + RANK_TO_POSITION[i] + '</option>';
     }
-    
-    // Добавляем 28-й ранг
-    html += '<option value="28"' + (parsed === 28 ? ' selected' : '') + '>28 - Губернатор</option>';
-    
-    return html;
   }
+  
+  // Добавляем 28-й ранг
+  html += '<option value="28"' + (parsed === 28 ? ' selected' : '') + '>28 - Губернатор</option>';
+  
+  return html;
+}
 
   function parseRankForSelect(rankStr) {
     const s = String(rankStr || "").trim().toLowerCase();
