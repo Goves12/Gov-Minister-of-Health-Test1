@@ -1259,7 +1259,7 @@
     const m = s.match(/(\d{1,2})/);
     if (m) {
       const n = parseInt(m[1], 10);
-      if (!isNaN(n) && n >= 1 && n <= 13) return n;
+      if (!isNaN(n) && n >= 1 && n <= 28) return n;
     }
     if (s.includes("зам") && s.includes("глав")) return 12;
     if (s.includes("зав") && s.includes("отдел")) return 11;
