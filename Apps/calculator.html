@@ -1588,7 +1588,7 @@
     }
 
     const dept = String(staffItem.department || "").trim();
-    const ALLOWED_DEPTS = ["СМП", "Инст СМП"];
+    const ALLOWED_DEPTS = ["СМП", "Инст СМП", "Руководство", "АБ", "ОК", "ИТ", "ПСЭС", "Инст ПСЭС", "Инст ИТ", "Инст ОК"];
 
     if (!ALLOWED_DEPTS.includes(dept)) {
       notifyParent("Ошибка", "Можно записывать отчёты только для отдела СМП и Инст СМП", "alert");
